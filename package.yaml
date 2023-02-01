@@ -1,0 +1,30 @@
+name:                haskell-app-template
+version:             0.0.0.1
+github:              "sandb0/haskell-app-template"
+license:             MIT
+author:              "sandb0"
+maintainer:          "sandbox0@hotmail.com"
+copyright:           "2023 sandb0"
+
+description:         Haskell basic application template.
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-app-template-exe:
+    main:                Main.hs
+    source-dirs:         app
+    dependencies:
+    - haskell-app-template
+
+tests:
+  haskell-app-template-test:
+    main:                MainTest.hs
+    source-dirs:         test
+    dependencies:
+    - haskell-app-template
+    - HUnit

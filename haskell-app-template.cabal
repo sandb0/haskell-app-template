@@ -1,0 +1,56 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-app-template
+version:        0.0.0.1
+description:    Haskell basic application template.
+homepage:       https://github.com/sandb0/haskell-app-template#readme
+bug-reports:    https://github.com/sandb0/haskell-app-template/issues
+author:         sandb0
+maintainer:     sandbox0@hotmail.com
+copyright:      2023 sandb0
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/sandb0/haskell-app-template
+
+library
+  exposed-modules:
+      Hello
+  other-modules:
+      Paths_haskell_app_template
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable haskell-app-template-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_app_template
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.7 && <5
+    , haskell-app-template
+  default-language: Haskell2010
+
+test-suite haskell-app-template-test
+  type: exitcode-stdio-1.0
+  main-is: MainTest.hs
+  other-modules:
+      HelloTest
+      Paths_haskell_app_template
+  hs-source-dirs:
+      test
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , haskell-app-template
+  default-language: Haskell2010
